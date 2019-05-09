@@ -3,9 +3,10 @@
 ## 1. What is a Decision Tree?  
   
 Machine learning offers a number of methods for classifying data into discrete categories, such as k-means clustering.   
-> Decision trees provide a structure for such categorization, based on > a series of decisions that led to separate distinct outcomes.  
+> Decision trees provide a structure for such categorization,
+> based on a series of decisions that led to separate distinct outcomes.  
   
-<TODO insert DT image here>  
+![https://github.com/fakemonk1/decision-tree-implementation-from-scratch/blob/master/images/decision_tree.png?raw=true](https://github.com/fakemonk1/decision-tree-implementation-from-scratch/blob/master/images/decision_tree.png?raw=true)
   
 In principal ```DecisionTrees``` can be used to predict the target feature of an unknown query instance by building a model based on existing data for which the target feature values are known (supervised learning)  
   
@@ -21,10 +22,11 @@ Following steps are taken for building the ```DecisionTree```:
  logic until a leaf node is reached  
   
   
+  
 ## 2. How to find the best split?  
   
 In ```DecisionTree``` all the nodes are decision nodes, it means a critical decision to go to the next node is taken at these nodes.   
-Let us now introduce two important concepts in Decision Trees - Impurity and Information Gain.   
+Let us now introduce two important concepts in Decision Trees: Impurity and Information Gain.   
 In a binary classification problem, an ideal split is a condition which can divide the data such that the branches are homogeneous.  
 A split should be capable of decreasing the impurity in the child node with respect to the parent node and the quantitative decrease of impurity in the child node is called the Information Gain.  
 We need to have a unit of measure to quantify the impurity and in the information gain at each level. Common measures of impurity are Gini and Cross Entropy. Let us understand them in detail because these are prerequisite for building ```DecisionTree```.
@@ -148,4 +150,6 @@ def classify(self, features):
     return class_labels
 ```
 
-<TODO: add random forest>
+The code used in this article and the complete working example can be found the git repository below:
+
+[https://github.com/fakemonk1/decision-tree-implementation-from-scratch](https://github.com/fakemonk1/decision-tree-implementation-from-scratch)
