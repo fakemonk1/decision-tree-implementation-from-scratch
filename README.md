@@ -6,7 +6,7 @@ Machine learning offers a number of methods for classifying data into discrete c
 > Decision trees provide a structure for such categorization,
 > based on a series of decisions that led to separate distinct outcomes.  
   
-![https://github.com/fakemonk1/decision-tree-implementation-from-scratch/blob/master/images/decision_tree.png?raw=true](https://github.com/fakemonk1/decision-tree-implementation-from-scratch/blob/master/images/decision_tree.png?raw=true)
+![dt_image](https://github.com/fakemonk1/decision-tree-implementation-from-scratch/blob/master/images/decision-tree.png?raw=true)
   
 In principal ```DecisionTrees``` can be used to predict the target feature of an unknown query instance by building a model based on existing data for which the target feature values are known (supervised learning)  
   
@@ -22,7 +22,6 @@ Following steps are taken for building the ```DecisionTree```:
  logic until a leaf node is reached  
   
   
-  
 ## 2. How to find the best split?  
   
 In ```DecisionTree``` all the nodes are decision nodes, it means a critical decision to go to the next node is taken at these nodes.   
@@ -32,8 +31,16 @@ A split should be capable of decreasing the impurity in the child node with resp
 We need to have a unit of measure to quantify the impurity and in the information gain at each level. Common measures of impurity are Gini and Cross Entropy. Let us understand them in detail because these are prerequisite for building ```DecisionTree```.
 
 ###  _Gini Index_
-<TODO fill this>  
+The Gini Index measures the inequality among values of a frequency distribution. A Gini index of zero expresses perfect equality, where all values are the same. 
+A Gini coefficient of 1 expresses maximal inequality among values. Maximum value of Gini Index could be when all target values are equally distributed.
+
+Steps to Calculate Gini for a split:
+
+- Calculate Gini for sub-nodes, using formula sum of square of probability for success and failure (p²+q²).
+- Calculate Gini for split using weighted Gini score of each node of that split
   
+![gini_image](https://github.com/fakemonk1/decision-tree-implementation-from-scratch/blob/master/images/decision-tree.png?raw=true)
+
 ###  _Cross Entropy_
 <TODO fill this>  
   
