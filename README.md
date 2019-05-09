@@ -39,12 +39,21 @@ Steps to Calculate Gini for a split:
 - Calculate Gini for sub-nodes, using formula sum of square of probability for success and failure (p²+q²).
 - Calculate Gini for split using weighted Gini score of each node of that split
   
-![gini_image](https://github.com/fakemonk1/decision-tree-implementation-from-scratch/blob/master/images/decision-tree.png?raw=true)
+![gini_image](https://github.com/fakemonk1/decision-tree-implementation-from-scratch/blob/master/images/gini-index.png?raw=true)
 
 ###  _Cross Entropy_
-<TODO fill this>  
-  
-  
+For understanding Cross Entropy let us understand Entropy first.
+Entropy quantifies the uncertainty of chaos in the group. Higher entropy means higher the disorder. It is maximum if in a class there are an equal number of objects from different attributes (like the group has 50 red and 50 black), and this is minimum if the node is pure (like the group has only 100 red or only 100 black). 
+We ultimately want to have minimum entropy for the tree, i.e. pure or uniform classes at the leaf nodes.
+
+Formula of the entropy is:
+![entropy_image](https://github.com/fakemonk1/decision-tree-implementation-from-scratch/blob/master/images/entropy_formula.png?raw=true)
+
+S is the current group for which we are interested in calculating entropy and Pi is the probability of finding that system 
+in ith state, or this turns to the proportion of a number of elements in that split group to the number of elements in the group before splitting(parent group).  
+while splitting the tree we select those attributes that achieves the greatest reduction in entropy. Now, this reduction (or change) in entropy is measured by Information Gain
+![ig_image](https://github.com/fakemonk1/decision-tree-implementation-from-scratch/blob/master/images/ig.png?raw=true)
+
 ## 3. Create Split  
 
 ```DecisionNode``` is the class to represent a single node in a decision tree, which has a ```decide``` function to select between left and right nodes
