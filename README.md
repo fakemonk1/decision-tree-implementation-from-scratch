@@ -8,9 +8,9 @@ Machine learning offers a number of methods for classifying data into discrete c
   
 ![dt_image](https://github.com/fakemonk1/decision-tree-implementation-from-scratch/blob/master/images/decision-tree.png?raw=true)
   
-In principal ```DecisionTrees``` can be used to predict the target feature of an unknown query instance by building a model based on existing data for which the target feature values are known (supervised learning)  
+In principal ```DecisionTrees``` can be used to predict the target feature of an unknown query instance by building a model based on existing data for which the target feature values are known (supervised learning).  
   
-In this article, we will work with decision trees to perform binary classification according to some decision boundary. We will **build and train** decision trees capable of solving useful classification problems and then we will effectively train them and finally will test their performance.  
+In this article, we will work with decision trees to perform binary classification according to some decision boundary. We will first **build and train** decision trees capable of solving useful classification problems and then we will effectively train them and finally will test their performance.  
 
 Following steps are taken for building the ```DecisionTree```:  
    
@@ -25,18 +25,17 @@ Following steps are taken for building the ```DecisionTree```:
 ## 2. How to find the best split?  
   
 In ```DecisionTree``` all the nodes are decision nodes, it means a critical decision to go to the next node is taken at these nodes.   
-Let us now introduce two important concepts in Decision Trees: Impurity and Information Gain.   
-In a binary classification problem, an ideal split is a condition which can divide the data such that the branches are homogeneous.  
-A split should be capable of decreasing the impurity in the child node with respect to the parent node and the quantitative decrease of impurity in the child node is called the Information Gain.  
+
+Let us now introduce two important concepts in Decision Trees: Impurity and Information Gain. In a binary classification problem, an ideal split is a condition which can divide the data such that the branches are homogeneous. A split should be capable of decreasing the impurity in the child node with respect to the parent node and the quantitative decrease of impurity in the child node is called the **Information Gain**.  
 We need to have a unit of measure to quantify the impurity and in the information gain at each level. Common measures of impurity are Gini and Cross Entropy. Let us understand them in detail because these are prerequisite for building ```DecisionTree```.
 
 ###  _Gini Index_
 The Gini Index measures the inequality among values of a frequency distribution. A Gini index of zero expresses perfect equality, where all values are the same. 
-A Gini coefficient of 1 expresses maximal inequality among values. Maximum value of Gini Index could be when all target values are equally distributed.
+A Gini coefficient of 1 expresses maximal inequality among values. The maximum value of Gini Index could be when all target values are equally distributed.
 
 Steps to Calculate Gini for a split:
 
-- Calculate Gini for sub-nodes, using formula sum of square of probability for success and failure (p²+q²).
+- Calculate Gini for sub-nodes, using formula sum of the square of probability for success and failure (p²+q²).
 - Calculate Gini for split using weighted Gini score of each node of that split
   
 ![gini_image](https://github.com/fakemonk1/decision-tree-implementation-from-scratch/blob/master/images/gini-index.png?raw=true)
@@ -51,8 +50,7 @@ Formula of the entropy is:
 
 ![entropy_image](https://github.com/fakemonk1/decision-tree-implementation-from-scratch/blob/master/images/entropy_formula.png?raw=true)
 
-S is the current group for which we are interested in calculating entropy and Pi is the probability of finding that system 
-in ith state, or this turns to the proportion of a number of elements in that split group to the number of elements in the group before splitting(parent group).  
+S is the current group for which we are interested in calculating entropy and Pi is the probability of finding that system in the ith state, or this turns to the proportion of a number of elements in that split group to the number of elements in the group before splitting(parent group).  
 while splitting the tree we select those attributes that achieves the greatest reduction in entropy. Now, this reduction (or change) in entropy is measured by Information Gain
 
 
