@@ -47,11 +47,15 @@ Entropy quantifies the uncertainty of chaos in the group. Higher entropy means h
 We ultimately want to have minimum entropy for the tree, i.e. pure or uniform classes at the leaf nodes.
 
 Formula of the entropy is:
+
+
 ![entropy_image](https://github.com/fakemonk1/decision-tree-implementation-from-scratch/blob/master/images/entropy_formula.png?raw=true)
 
 S is the current group for which we are interested in calculating entropy and Pi is the probability of finding that system 
 in ith state, or this turns to the proportion of a number of elements in that split group to the number of elements in the group before splitting(parent group).  
 while splitting the tree we select those attributes that achieves the greatest reduction in entropy. Now, this reduction (or change) in entropy is measured by Information Gain
+
+
 ![ig_image](https://github.com/fakemonk1/decision-tree-implementation-from-scratch/blob/master/images/ig.png?raw=true)
 
 ## 3. Create Split  
