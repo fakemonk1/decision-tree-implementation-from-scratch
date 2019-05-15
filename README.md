@@ -1,5 +1,12 @@
 # Decision Tree Implementation from Scratch  
-  
+
+In this article, we will work with decision trees to perform binary classification according to some decision boundary. 
+We will first **build and train** decision trees capable of solving useful classification problems and then we will effectively **train** them and finally will **test their performance**.  
+The code used in this article and the complete working example can be found the git repository below:
+
+[https://github.com/fakemonk1/decision-tree-implementation-from-scratch](https://github.com/fakemonk1/decision-tree-implementation-from-scratch)
+
+
 ## 1. What is a Decision Tree?  
   
 Machine learning offers a number of methods for classifying data into discrete categories, such as k-means clustering.   
@@ -10,8 +17,6 @@ Machine learning offers a number of methods for classifying data into discrete c
   
 In principal ```DecisionTrees``` can be used to predict the target feature of an unknown query instance by building a model based on existing data for which the target feature values are known (supervised learning).  
   
-In this article, we will work with decision trees to perform binary classification according to some decision boundary. We will first **build and train** decision trees capable of solving useful classification problems and then we will effectively train them and finally will test their performance.  
-
 Following steps are taken for building the ```DecisionTree```:  
    
 1. Start with the labelled dataset containing a number of training data characterized by a number of descriptive features and a target feature  
